@@ -160,3 +160,27 @@ const obj = {
   // Computed (dynamic) property names
   ["prop_" + (() => 42)()]: 42,
 };
+
+##### String literals
+A string literal is zero or more characters enclosed in double (") or single (') quotation marks. 
+
+'foo'
+"bar"
+'1234'
+'one line \n another line'
+"Joyo's cat"
+
+You can call any of the String object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. 
+
+Note: Template literals provide syntactic sugar for constructing strings.
+// Basic literal string creation
+`In JavaScript '\n' is a line-feed.`
+
+// Multiline strings
+`In JavaScript, template strings can run
+ over multiple lines, but double and single
+ quoted strings cannot.`
+
+// String interpolation
+const name = 'Lev', time = 'today';
+`Hello ${name}, how are you ${time}?`
