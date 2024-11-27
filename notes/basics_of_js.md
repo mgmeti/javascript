@@ -114,3 +114,49 @@ In expressions involving numeric and string values with the + operator, JavaScri
 x = "The answer is " + 42; // "The answer is 42"
 y = 42 + " is the answer"; // "42 is the answer"
 
+"37" - 7; // 30
+"37" * 7; // 259
+
+Converting strings to numbers
+In the case that a value representing a number is in memory as a string, there are methods for conversion.
+
+parseInt()
+parseFloat()
+
+parseInt("101", radix=2); // 5
+
+#### Literals
+Literals represent values in JavaScript. 
+1. Array literals:
+An array literal is a list of zero or more expressions, each of which represents an array element, enclosed in square brackets ([]). When you create an array using an array literal, it is initialized with the specified values as its elements, and its length is set to the number of arguments specified.
+
+const coffees = ["French Roast", "Colombian", "Kona"]; // 3
+
+Note: Array literals create Array objects.
+
+2. Boolean literals:
+The Boolean type has two literal values: true and false.
+
+3. Numeric literals:
+JavaScript numeric literals include integer literals in different bases as well as floating-point literals in base-10.
+
+#### Object literals
+
+An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces ({}).
+
+##### Enhanced Object literals
+Object literals support a range of shorthand syntaxes that include setting the prototype at construction, shorthand for foo: foo assignments, defining methods, making super calls, and computing property names with expressions.
+
+const obj = {
+  // __proto__
+  __proto__: theProtoObj,
+  // Shorthand for 'handler: handler'
+  handler,
+  // Methods
+  toString() {
+    // Super calls
+    return "d " + super.toString();
+  },
+  // Computed (dynamic) property names
+  ["prop_" + (() => 42)()]: 42,
+};
